@@ -29,7 +29,7 @@ PreferredSizeWidget appBarComponent(BuildContext context,
         alignment: Alignment.topCenter,
         margin: const EdgeInsets.only(right: 16),
         child: Icon(
-          Icons.person,
+          Icons.account_circle_rounded,
           color: AppColors.white,
         ),
       ),
