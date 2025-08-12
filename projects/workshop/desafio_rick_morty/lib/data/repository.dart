@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:desafio_rick_morty/models/paginated_characters.dart';
 import 'package:desafio_rick_morty/models/detailed_characters.dart';
+import 'package:desafio_rick_morty/models/episode.dart';
 abstract class Repository {
   static final _dio = Dio(
     BaseOptions(
@@ -16,5 +17,10 @@ abstract class Repository {
   static Future<DetailedCharacter> getCharacterDetails(int characterId) async {
     var response = await _dio.get("/character/$characterId");
     return DetailedCharacter.fromJson(response.data);
+  }
+
+  static Future<Episode> getEpisodeDetails(String url) async {
+    var response = await _dio.get(url);
+    return Episode.fromJson(response.data);
   }
 }

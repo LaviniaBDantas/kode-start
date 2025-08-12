@@ -3,10 +3,12 @@ import 'package:desafio_rick_morty/models/detailed_characters.dart';
 import 'package:desafio_rick_morty/theme/app_colors.dart';
 
 class DetailedCharacterCard extends StatelessWidget {
-  const DetailedCharacterCard({required this.detailedCharacter, Key? key})
+  const DetailedCharacterCard({required this.detailedCharacter,required this.firstAppearanceName, Key? key})
       : super(key: key);
 
   final DetailedCharacter detailedCharacter;
+  final String firstAppearanceName;
+
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class DetailedCharacterCard extends StatelessWidget {
                 _buildInfoRow('Gênero', detailedCharacter.gender),
                 _buildInfoRow('Origem', detailedCharacter.origin.name),
                 _buildInfoRow('Última Localização', detailedCharacter.location.name),
-                _buildInfoRow('Primeira aparição (URL)', detailedCharacter.episode.first),
+                _buildInfoRow('Primeira aparição', firstAppearanceName),
               ],
             ),
           )
