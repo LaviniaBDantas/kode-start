@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:desafio_rick_morty/pages/details_page.dart';
 import 'package:desafio_rick_morty/pages/home_page.dart';
+import 'package:desafio_rick_morty/pages/favorites_page.dart';
 
 void main() {
   runApp(const RickAndMortyApp());
@@ -27,6 +28,11 @@ class RickAndMortyApp extends StatelessWidget {
             return MaterialPageRoute(
               settings: settings,
               builder: (context) => DetailsPage(characterId: characterId),
+            );
+          case FavoritesPage.routeId:
+            return MaterialPageRoute(
+              settings: settings,
+              builder: (context) => const FavoritesPage(),
             );
           default:
             return null;

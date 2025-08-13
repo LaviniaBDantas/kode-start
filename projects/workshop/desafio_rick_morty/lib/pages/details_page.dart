@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:desafio_rick_morty/components/app_bar_component.dart';
 import 'package:desafio_rick_morty/components/detailed_character_card.dart';
 import 'package:desafio_rick_morty/data/repository.dart';
-import 'package:desafio_rick_morty/models/detailed_characters.dart';
-import 'package:desafio_rick_morty/models/episode.dart';
 import 'package:desafio_rick_morty/theme/app_colors.dart';
 
 class DetailsPage extends StatefulWidget {

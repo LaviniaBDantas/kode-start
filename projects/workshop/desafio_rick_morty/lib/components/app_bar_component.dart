@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:desafio_rick_morty/pages/home_page.dart';
+import 'package:desafio_rick_morty/pages/favorites_page.dart';
 import 'package:desafio_rick_morty/theme/app_images.dart';
 import '../theme/app_colors.dart';
 
@@ -28,9 +29,15 @@ PreferredSizeWidget appBarComponent(BuildContext context,
       Container(
         alignment: Alignment.topCenter,
         margin: const EdgeInsets.only(right: 16),
-        child: Icon(
-          Icons.account_circle_rounded,
-          color: AppColors.white,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, FavoritesPage.routeId);
+          },
+          child: Icon(
+            Icons.account_circle_rounded,
+            color: AppColors.white,
+            size: 31.46,
+          ),
         ),
       ),
     ],
